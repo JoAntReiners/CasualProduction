@@ -5,11 +5,12 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     #region Public
-    public GameObject obstacle;
+    public GameObject[] obstacle;
     #endregion
 
     void Start()
     {
-        Instantiate(obstacle, transform.position, Quaternion.identity);
+        int rand = Random.Range(0, obstacle.Length);
+        Instantiate(obstacle[rand], transform.position, Quaternion.identity);
     }
 }
