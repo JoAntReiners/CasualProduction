@@ -215,77 +215,77 @@ Transform:
   m_LocalScale: {x: 64.443184, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3300331020606009268
+--- !u!1001 &462483406167682328
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3300331021381498673, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 8152473294878468092, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_Name
-      value: PlayerRagdoll
+      value: PlayerRagdoll_02
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5414054
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9307185
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.196289
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300331021381498674, guid: 24618c6503a95ef4182d7b633b97b2a8,
+    - target: {fileID: 6327429720220991755, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 24618c6503a95ef4182d7b633b97b2a8, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f0a3787ddcae60c45a11631bf0357322, type: 3}
 --- !u!212 &4532515006083548270
 SpriteRenderer:
   m_ObjectHideFlags: 0
