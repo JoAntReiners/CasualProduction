@@ -51,4 +51,9 @@ public class Obstacle : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDestroy()
+    {
+        
+    }
 }

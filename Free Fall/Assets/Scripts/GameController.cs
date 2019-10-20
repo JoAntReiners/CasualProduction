@@ -12,15 +12,20 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI healthText;
     public SpriteRenderer bg;
     public Sprite[] backgrounds;
+    public int currentPosition;
     #endregion
 
     #region Private
     private float score;
     private PlayerController player;
+    private int currentDir;
+    private float timer;
     #endregion
 
     void Start()
     {
+        currentPosition = 0;
+        currentDir = 1;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
@@ -28,15 +33,24 @@ public class GameController : MonoBehaviour
     void Update()
     {
         score += (Time.deltaTime);
+        timer += Time.deltaTime;
         scoreText.text = "Score: " + score.ToString("#.##");
 
-        if(score >= 60 && score < 120)
-        { 
-            bg.sprite = backgrounds[1];
-        }
-        else if (score >= 120)
+        if(timer >= 15)
         {
-            bg.sprite = backgrounds[2];
+            timer = 0;
+            currentPosition += currentDir;
+
+            if(currentPosition == backgrounds.Length-1)
+            {
+                currentDir *= -1;
+            }
+            else if(currentPosition == 0)
+            {
+                currentDir *= -1;
+            }
+
+            bg.sprite = backgrounds[currentPosition];
         }
 
         healthText.text = "Health: " + player.health;
