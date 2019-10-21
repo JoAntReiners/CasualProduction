@@ -44,6 +44,6 @@ public class Pickup : MonoBehaviour
 
     private void OnDestroy()
     {
-        source.PlayOneShot(pickupSound);
+        source.PlayOneShot(pickupSound); 
     }
 }

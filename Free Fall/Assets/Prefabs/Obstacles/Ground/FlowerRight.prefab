@@ -128,6 +128,7 @@ MonoBehaviour:
   down: 0
   speed: 1
   hitSound: {fileID: 8300000, guid: 027723f070c32f04b9a1e3030919c10d, type: 3}
+  sys: {fileID: 5968147859764080209, guid: b506e8a5790da1442bca9743f6e17802, type: 3}
 --- !u!114 &4729340607042200498
 MonoBehaviour:
   m_ObjectHideFlags: 0

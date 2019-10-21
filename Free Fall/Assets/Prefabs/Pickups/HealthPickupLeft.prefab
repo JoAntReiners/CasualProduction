@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7b9087882fd9745a6425b47109de77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sys: {fileID: 8641246900700677046, guid: 961c718190e04444693e63f364bb76cc, type: 3}
 --- !u!114 &-3992502546470137891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +140,7 @@ MonoBehaviour:
   right: 0
   down: 0
   speed: 1
+  pickupSound: {fileID: 8300000, guid: 42d69926ca26c9947b90f47443e2264a, type: 3}
 --- !u!114 &1032567548246931249
 MonoBehaviour:
   m_ObjectHideFlags: 0

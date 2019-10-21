@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3933224399220945721}
   - component: {fileID: -1848647247344972740}
   m_Layer: 0
-  m_Name: InvulnPickup 1
+  m_Name: InvulnPickupLeft
   m_TagString: Pickups
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,6 +139,8 @@ MonoBehaviour:
   right: 0
   down: 0
   speed: 1
+  pickupSound: {fileID: 8300000, guid: 42d69926ca26c9947b90f47443e2264a, type: 3}
+  sys: {fileID: 0}
 --- !u!114 &-1848647247344972740
 MonoBehaviour:
   m_ObjectHideFlags: 0

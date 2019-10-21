@@ -12,10 +12,12 @@ public class Obstacle : MonoBehaviour
     public bool down;
     public int speed;
     public AudioClip hitSound;
+    public GameObject sys;
     #endregion
 
     #region Private
     private AudioSource source;
+    private Transform trans;
     #endregion
 
     private void Start()
@@ -41,6 +43,8 @@ public class Obstacle : MonoBehaviour
         {
             transform.Translate(Vector2.down * speed * Time.deltaTime);
         }
+
+        trans = gameObject.transform;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,7 +63,10 @@ public class Obstacle : MonoBehaviour
             {
                 Debug.Log("Player hit but is invuln");
             }
-            Destroy(gameObject);
+            Destroy(Instantiate(sys, trans), 1.75f);
+            GetComponent<SpriteRenderer>().sprite = null;
+            GetComponent<BoxCollider2D>().enabled = false;
+            Destroy(gameObject, 2f);
         }
     }
 

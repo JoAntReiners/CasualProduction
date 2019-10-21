@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
+    #region Public
+    public ParticleSystem sys;
+    #endregion
+
+    #region Private
+    private Transform trans;
+    #endregion
+
+    private void Update()
+    {
+        trans = gameObject.transform;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
@@ -18,7 +31,10 @@ public class HealthPickup : MonoBehaviour
                 collision.GetComponent<PlayerController>().health++;
             }
             Debug.Log(collision.GetComponent<PlayerController>().health);
-            Destroy(gameObject);
+            Destroy(Instantiate(sys, trans), 1.75f);
+            GetComponent<SpriteRenderer>().sprite = null;
+            GetComponent<BoxCollider2D>().enabled = false;
+            Destroy(gameObject, 2f);
         }
 
     }
