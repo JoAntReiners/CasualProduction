@@ -77,11 +77,12 @@ public class PlayerController : MonoBehaviour
 
     public void toggleHurt()
     {
-        StartCoroutine("toggleInvuln()");
+        StartCoroutine("toggleInvuln");
     }
 
-    IEnumerable toggleInvuln()
+    IEnumerator toggleInvuln()
     {
+        Debug.Log("Invuln!");
         canBeHurt = false;
         yield return new WaitForSecondsRealtime(5);
         canBeHurt = true;
