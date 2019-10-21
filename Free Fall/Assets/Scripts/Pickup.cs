@@ -10,7 +10,17 @@ public class Pickup : MonoBehaviour
     public bool right;
     public bool down;
     public int speed;
+    public AudioClip pickupSound;
     #endregion
+
+    #region Private
+    private AudioSource source;
+    #endregion
+
+    private void Start()
+    {
+        source = GameObject.FindGameObjectWithTag("GameController").GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -34,6 +44,6 @@ public class Pickup : MonoBehaviour
 
     private void OnDestroy()
     {
-
+        source.PlayOneShot(pickupSound);
     }
 }
