@@ -11,7 +11,17 @@ public class Obstacle : MonoBehaviour
     public bool right;
     public bool down;
     public int speed;
+    public AudioClip hitSound;
     #endregion
+
+    #region Private
+    private AudioSource source;
+    #endregion
+
+    private void Start()
+    {
+        source = GameObject.FindGameObjectWithTag("GameController").GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -42,6 +52,7 @@ public class Obstacle : MonoBehaviour
             {
                 temp.health -= damage;
                 Debug.Log("Player hit, health at " + temp.health);
+                source.PlayOneShot(hitSound);
                 temp.camAnim.SetTrigger("shake");
             }
             else

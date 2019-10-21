@@ -9,7 +9,8 @@ public class GameController : MonoBehaviour
 {
     #region Public
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI healthText;
+    public Image healthDisplay;
+    public Sprite[] healthImages;
     public SpriteRenderer bg;
     public Sprite[] backgrounds;
     public int currentPosition;
@@ -34,7 +35,7 @@ public class GameController : MonoBehaviour
     {
         score += (Time.deltaTime);
         timer += Time.deltaTime;
-        scoreText.text = "Score: " + score.ToString("#.##");
+        scoreText.text = score.ToString("#.##");
 
         if(timer >= 15)
         {
@@ -52,8 +53,19 @@ public class GameController : MonoBehaviour
 
             bg.sprite = backgrounds[currentPosition];
         }
-
-        healthText.text = "Health: " + player.health;
+        
+        if(player.health == 3)
+        {
+            healthDisplay.sprite = healthImages[0];
+        }
+        else if(player.health == 2)
+        {
+            healthDisplay.sprite = healthImages[1];
+        }
+        else if(player.health == 1)
+        {
+            healthDisplay.sprite = healthImages[2];
+        }
 
         if(player.health == 0)
         {

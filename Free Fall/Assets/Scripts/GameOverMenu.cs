@@ -15,7 +15,7 @@ public class GameOverMenu : MonoBehaviour
     {
         float score = PlayerPrefs.GetFloat("Score");
         float highScore = PlayerPrefs.GetFloat("HighScore");
-        scoreText.text = "Score: " + score.ToString("#.##");
+        scoreText.text = score.ToString("#.##");
         //highScoreText.text = "High Score: " + highScore.ToString("#.##");
     }
 
