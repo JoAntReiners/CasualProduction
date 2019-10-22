@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        #region Mouse Movement
+        /* Mouse Movement
         if(Input.GetMouseButton(0))
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -44,35 +46,24 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-
-        #region Old Code
-        /* transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-
-         if (vertical)
-         {
-             if (Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < maxLength)
-             {
-                 camAnim.SetTrigger("shake");
-                 targetPos = new Vector2(transform.position.x + xIncrement, transform.position.y);
-             }
-             else if (Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > minLength)
-             {
-                 camAnim.SetTrigger("shake");
-                 targetPos = new Vector2(transform.position.x - xIncrement, transform.position.y);
-             }
-         }
-         else
-         {
-             if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)
-             {
-                 targetPos = new Vector2(transform.position.x, transform.position.y + yIncrement);
-             }
-             else if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight)
-             {
-                 targetPos = new Vector2(transform.position.x, transform.position.y - yIncrement);
-             }
-         } */
+        */
         #endregion
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            mousePos = Camera.main.ScreenToWorldPoint(touch.position);
+            direction = (mousePos - transform.position).normalized;
+            rb.velocity = new Vector2(direction.x * speed * Time.deltaTime, direction.y * speed * Time.deltaTime);
+
+            if(touch.phase == TouchPhase.Ended)
+            {
+                rb.velocity = Vector2.zero;
+            }
+        }
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.65f, 2.65f), Mathf.Clamp(transform.position.y, -4f, 4f), transform.position.z);
+
     }
 
     public void toggleHurt()
