@@ -19,10 +19,14 @@ public class CoinPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") + 1);
-        Destroy(Instantiate(sys, trans), 1.75f);
-        GetComponent<SpriteRenderer>().sprite = null;
-        GetComponent<CircleCollider2D>().enabled = false;
-        Destroy(gameObject, 2f);
+        if(collision.CompareTag("Player"))
+        {
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().updateScore();
+            Destroy(Instantiate(sys, trans), 1.75f);
+            GetComponent<SpriteRenderer>().sprite = null;
+            GetComponent<CircleCollider2D>().enabled = false;
+            Destroy(gameObject, 2f);
+        }
+        
     }
 }

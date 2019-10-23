@@ -61,9 +61,6 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = Vector2.zero;
             }
         }
-
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.65f, 2.65f), Mathf.Clamp(transform.position.y, -4f, 4f), transform.position.z);
-
     }
 
     public void toggleHurt()
