@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 using TMPro;
 
 public class GameOverMenu : MonoBehaviour
@@ -11,12 +12,19 @@ public class GameOverMenu : MonoBehaviour
     public TextMeshProUGUI highScoreText;
     #endregion
 
+    #region Private
+    private string gameID = "3340866";
+    [SerializeField] private bool testMode = true;
+    private bool isShown = false;
+    #endregion
+
     private void Start()
     {
+        Advertisement.Initialize(gameID, testMode);
         float score = PlayerPrefs.GetFloat("Score");
         float highScore = PlayerPrefs.GetFloat("HighScore");
         scoreText.text = score.ToString("#.##");
-        //highScoreText.text = "High Score: " + highScore.ToString("#.##");
+
     }
 
     public void MainMenu()
@@ -27,5 +35,14 @@ public class GameOverMenu : MonoBehaviour
     public void PlayAgain()
     {
         SceneManager.LoadScene(1);
+    }
+
+    private void Update()
+    {
+        if (Advertisement.IsReady() && !isShown)
+        {
+            isShown = true;
+            Advertisement.Show();
+        }
     }
 }
