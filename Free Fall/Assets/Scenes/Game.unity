@@ -1058,6 +1058,11 @@ PrefabInstance:
       propertyPath: speed
       value: 5000
       objectReference: {fileID: 0}
+    - target: {fileID: 2114463930, guid: f0a3787ddcae60c45a11631bf0357322, type: 3}
+      propertyPath: shieldVFX
+      value: 
+      objectReference: {fileID: 7478427204709074450, guid: 858810319d4091848b937f6e918c580f,
+        type: 3}
     - target: {fileID: 6758672174897546326, guid: f0a3787ddcae60c45a11631bf0357322,
         type: 3}
       propertyPath: m_SortingLayerID
