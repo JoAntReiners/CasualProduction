@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
     public void toggleHurt()
     {
+        StopAllCoroutines();
         StartCoroutine("toggleInvuln");
     }
 
