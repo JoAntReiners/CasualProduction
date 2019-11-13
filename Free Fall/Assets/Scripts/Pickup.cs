@@ -15,6 +15,7 @@ public class Pickup : MonoBehaviour
 
     #region Private
     private AudioSource source;
+    private bool hit = false;
     #endregion
 
     private void Start()
@@ -42,8 +43,12 @@ public class Pickup : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        source.PlayOneShot(pickupSound); 
+        if (!hit)
+        {
+            source.PlayOneShot(pickupSound);
+            hit = true;
+        }
     }
 }

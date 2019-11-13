@@ -20,7 +20,6 @@ public class GameOverMenu : MonoBehaviour
 
     private void Start()
     {
-        Advertisement.Initialize(gameID, testMode);
         float score = PlayerPrefs.GetFloat("Score");
         float highScore = PlayerPrefs.GetFloat("HighScore");
         scoreText.text = score.ToString("#.##");
@@ -35,14 +34,5 @@ public class GameOverMenu : MonoBehaviour
     public void PlayAgain()
     {
         SceneManager.LoadScene(1);
-    }
-
-    private void Update()
-    {
-        if (Advertisement.IsReady() && !isShown)
-        {
-            isShown = true;
-            Advertisement.Show();
-        }
     }
 }

@@ -21,17 +21,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private bool testMode = true;
     #endregion
 
-    private void Start()
-    {
-        Advertisement.Initialize(gameID, testMode);
-        Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
-        StartCoroutine(ShowBannerWhenReady());
-    }
-
     public void Play()
     {
         StopAllCoroutines();
-        Advertisement.Banner.Hide();
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
@@ -51,14 +43,5 @@ public class MainMenu : MonoBehaviour
     public void setVolume()
     {
         mixer.SetFloat("Volume", slider.value);
-    }
-
-    IEnumerator ShowBannerWhenReady()
-    {
-        while (!Advertisement.IsReady(placementId))
-        {
-            yield return new WaitForSeconds(0.5f);
-        }
-        Advertisement.Banner.Show(placementId);
     }
 }

@@ -8,18 +8,15 @@ public class RepeatingBG : MonoBehaviour
     public float speed;
     public float startY;
     public float endY;
-    public float startX;
-    public float endX;
     #endregion
 
     void Update()
     {
         transform.Translate(Vector2.up * speed * Time.deltaTime); 
 
-        if(transform.position.y >= endY)
+        if(transform.position.y >= endY || transform.position.y <= startY)
         {
-            Vector2 pos = new Vector2(transform.position.x, startY);
-            transform.position = pos;
+            speed *= -1;
         }
 
     }

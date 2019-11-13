@@ -9,11 +9,9 @@ public class GameController : MonoBehaviour
 {
     #region Public
     public TextMeshProUGUI scoreText;
-    public Image healthDisplay;
-    public Sprite[] healthImages;
-    public SpriteRenderer bg;
-    public Sprite[] backgrounds;
+    public Slider healthSlider;
     public int currentPosition;
+    public int currentLevel;
     #endregion
 
     #region Private
@@ -41,30 +39,28 @@ public class GameController : MonoBehaviour
         {
             timer = 0;
             currentPosition += currentDir;
-
-            if(currentPosition == backgrounds.Length-1)
+            if (currentPosition == 4)
             {
                 currentDir *= -1;
             }
-            else if(currentPosition == 0)
+            else if (currentPosition == 0)
             {
-                currentDir *= -1;
+              currentDir *= -1;
             }
-
-            bg.sprite = backgrounds[currentPosition];
+            currentLevel++;
         }
         
         if(player.health == 3)
         {
-            healthDisplay.sprite = healthImages[0];
+            healthSlider.value = 3;
         }
         else if(player.health == 2)
         {
-            healthDisplay.sprite = healthImages[1];
+            healthSlider.value = 2;
         }
         else if(player.health == 1)
         {
-            healthDisplay.sprite = healthImages[2];
+            healthSlider.value = 1;
         }
 
         if(player.health == 0)
