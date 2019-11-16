@@ -45,4 +45,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 8707925364167475795, guid: e6b874c3981cf4e42bdbfbd832aaabb6, type: 3}
-  - {fileID: 8707925364167475795, guid: cd0317a62a676864d8b8ff0b3c1448ea, type: 3}
