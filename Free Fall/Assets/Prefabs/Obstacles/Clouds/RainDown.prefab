@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6808015148977353798}
   - component: {fileID: 4729340607042200498}
   m_Layer: 0
-  m_Name: GrassRight
+  m_Name: RainDown
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8707925364167475795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.493, y: -4.5, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 969064771
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 82463e42dbed40a41861c8e5aa86ed86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e2ad24f342fac74e8469c8778d36d55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,14 +100,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.29, y: 5.1}
+    oldSize: {x: 5.99, y: 5.98}
     newSize: {x: 8.43, y: 7.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2, y: 3.2}
+  m_Size: {x: 3, y: 4}
   m_EdgeRadius: 0
 --- !u!114 &6808015148977353798
 MonoBehaviour:
@@ -124,11 +124,11 @@ MonoBehaviour:
   damage: 1
   up: 0
   left: 0
-  right: 1
-  down: 0
+  right: 0
+  down: 1
   speed: 1
   hitSound: {fileID: 8300000, guid: 027723f070c32f04b9a1e3030919c10d, type: 3}
-  sys: {fileID: 6579766975861128952, guid: 334f0e282b33bb04c92f15229247937d, type: 3}
+  sys: {fileID: 5756148086393236449, guid: e3dafb4241f745e4993cfe7278072b80, type: 3}
 --- !u!114 &4729340607042200498
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6808015148977353798}
   - component: {fileID: 4729340607042200498}
   m_Layer: 0
-  m_Name: UFOLeft
+  m_Name: CloverRight
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 969064771
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4d115e33e869dca459c05db4c9b86ad9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00a79c236b2a6d74e8d0e7835f75f3fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,14 +100,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.29, y: 5.1}
+    oldSize: {x: 6.09, y: 6.18}
     newSize: {x: 8.43, y: 7.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 3}
+  m_Size: {x: 3.2, y: 3.2}
   m_EdgeRadius: 0
 --- !u!114 &6808015148977353798
 MonoBehaviour:
@@ -123,12 +123,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   up: 0
-  left: 1
-  right: 0
+  left: 0
+  right: 1
   down: 0
   speed: 1
   hitSound: {fileID: 8300000, guid: 027723f070c32f04b9a1e3030919c10d, type: 3}
-  sys: {fileID: 3500374367632194718, guid: 520460b03ac16eb41aeaa5d26825a9c4, type: 3}
+  sys: {fileID: 6579766975861128952, guid: 334f0e282b33bb04c92f15229247937d, type: 3}
 --- !u!114 &4729340607042200498
 MonoBehaviour:
   m_ObjectHideFlags: 0
