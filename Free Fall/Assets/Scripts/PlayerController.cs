@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public int health = 1;
     public bool canBeHurt = true;
     public Animator camAnim;
+    public GameObject shield;
     #endregion
 
     #region Private
@@ -73,8 +74,10 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Invuln!");
         canBeHurt = false;
+        shield.SetActive(true);
         yield return new WaitForSecondsRealtime(5);
         canBeHurt = true;
+        shield.SetActive(false);
     }
 
 }

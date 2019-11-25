@@ -24,7 +24,6 @@ public class InvulnPickup : MonoBehaviour
         {
             playertransform.transform.position = collision.transform.position;
             collision.GetComponent<PlayerController>().toggleHurt();
-            Destroy(Instantiate(sys, playertransform.transform), 5f);
             GetComponent<SpriteRenderer>().sprite = null;
             GetComponent<BoxCollider2D>().enabled = false;
             Destroy(gameObject, 5f);
